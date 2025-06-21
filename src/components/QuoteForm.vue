@@ -45,6 +45,18 @@
         alt="Generated Quote"
         class="preview-img"
       />
+      <!-- Download Button -->
+      <a
+  v-if="imageUrl"
+  :href="imageUrl"
+  download="poetic_quote.jpg"
+  class="download-btn"
+  title="Download your image"
+>
+  📥 Download High Quality
+</a>
+
+
     </form>
   </template>
   
@@ -186,5 +198,22 @@
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
+  .download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  text-align: center;
+  background-color: #10b981;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #059669;
+}
+
   </style>
   
